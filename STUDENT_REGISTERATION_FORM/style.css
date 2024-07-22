@@ -1,0 +1,215 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background: url('Background_image.jpg') no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'Roboto', Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 1050px;
+    height: 650px;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.frame {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    color: #FFFFFF;
+    font-size: 18px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    width: 100%;
+    position: relative;
+}
+
+.input-with-text {
+    position: relative;
+    width: 100%;
+}
+
+.input-with-text input,
+.input-with-text select {
+    width: 100%;
+    padding: 12px 0;
+    border: none;
+    border-bottom: 1px solid #FFFFFF;
+    background-color: transparent;
+    color: #FFFFFF;
+    font-size: 16px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    transition: border-color 0.3s ease, padding-top 0.3s ease;
+    outline: none;
+}
+
+.input-with-text select {
+    appearance: none;
+    -webkit-appearance: none;
+    background-image: url('data:image/svg+xml;utf8,<svg fill="white" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M16 22L6 12h20z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 14px;
+    padding-right: 30px;
+    border-bottom: 1px solid #FFFFFF;
+    color: #FFFFFF;
+    font-size: 16px;
+    box-sizing: border-box;
+    transition: background-color 0.3s ease;
+    background-color: transparent;
+}
+
+.input-with-text select:focus {
+    background-color: transparent;
+}
+
+.input-with-text select option {
+    background-color: rgba(51, 51, 51, 0.5);
+    backdrop-filter: blur(10px);
+    color: #ffffff;
+}
+
+.input-with-text .text {
+    position: absolute;
+    left: 0;
+    bottom: 12px;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 16px;
+    transition: color 0.3s ease, transform 0.3s ease;
+    pointer-events: none;
+    transform: translateY(0);
+    z-index: 1;
+}
+
+.input-with-text .icon {
+    position: absolute;
+    right: 0;
+    bottom: 12px;
+    color: #FFFFFF;
+    font-size: 16px;
+    transition: color 0.3s ease, transform 0.3s ease;
+    pointer-events: none;
+    transform: translateY(0);
+    z-index: 1;
+}
+
+.input-with-text input:focus,
+.input-with-text select:focus {
+    border-color: #FFFFFF;
+    padding-top: 20px;
+}
+
+.input-with-text input:focus + .text,
+.input-with-text input:focus + .icon,
+.input-with-text select:focus + .text,
+.input-with-text select:focus + .icon,
+.input-with-text input:valid + .text,
+.input-with-text input:valid + .icon,
+.input-with-text select:valid + .text,
+.input-with-text select:valid + .icon {
+    top: -10px;
+    font-size: 12px;
+    color: #66afe9;
+}
+
+.form-group button {
+    padding: 12px 24px;
+    background-color: #9C6FE4;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.form-group button:hover {
+    background-color: #7D4AB2;
+}
+
+.frame-blue {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    color: #FFFFFF;
+    font-size: 22px;
+    padding: 20px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.frame-blue .text-box {
+    width: 100%;
+    z-index: 2;
+    margin-bottom: 30px;
+    text-align: left;
+    position: relative;
+    left: -100px;
+}
+
+.frame-blue .text-box h1 {
+    margin: 0;
+    font-size: 2.5em;
+    font-family: 'Roboto', Arial, sans-serif;
+}
+
+.frame-blue .text-box p {
+    margin: 5px 0 0;
+    font-size: 1.5em;
+    font-family: 'Roboto', Arial, sans-serif;
+}
+
+.frame-blue .image-container {
+    position: relative;
+    width: 120%;
+    height: auto;
+    margin-left: -30%;
+    margin-top: 10px;
+}
+
+.frame-blue img {
+    width: 90%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.frame-blue .university-text {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 12px;
+    text-align: center;
+    position: absolute;
+    bottom: 10px;
+    right: 20px;
+}
+
+input:-webkit-autofill,
+select:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 1000px transparent inset !important;
+    box-shadow: 0 0 0 1000px transparent inset !important;
+    -webkit-text-fill-color: #FFFFFF !important;
+    transition: background-color 5000s ease-in-out 0s;
+}
